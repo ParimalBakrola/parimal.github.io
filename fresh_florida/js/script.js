@@ -60,11 +60,14 @@ $(document).ready(function(){
     }
 
     $("#theme_toggle").funcToggle('click',function() {
-        trans();
-        $("html").attr("data-theme", "dark");
+            trans();
+            $("html").attr("data-theme", "dark");
+            $("#theme_toggle span").toggleClass("icon-moon icon-sun");
         }
         ,function(){
             trans();
-            $("html").attr("data-theme", "light");}
+            $("html").attr("data-theme", "light");        
+            $("#theme_toggle span").toggleClass("icon-moon icon-sun");
+        }
     );
 });
