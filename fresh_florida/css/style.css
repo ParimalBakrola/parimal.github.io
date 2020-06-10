@@ -23,6 +23,24 @@ html {
   --txt:#1C1627;
 }
 
+html[data-theme='dark'] {
+  --bg1: #363950;
+  --bg2: #4B4D5D;
+  --bg3: #20243E;
+  --txt-colorg:#3DCE5F;
+  --txt:#ffffff;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
+}
+
 body {
   background-color: var(--bg3);
   padding: 0;
@@ -165,6 +183,10 @@ ul {
           box-shadow: none;
   padding: 10px;
   font-size: 18px;
+}
+
+.navbar .toggle-btn span {
+  margin-right: 0;
 }
 
 .navbar .btn, .navbar .btn-grn, .navbar .btn-org {
@@ -352,5 +374,132 @@ ul {
           transform: translateY(-50%) rotate(45deg);
   margin-top: -3px;
   margin-left: 5px;
+}
+
+.md-form .form-control {
+  border-radius: 40px !important;
+  border: 0 !important;
+  background-color: #eee !important;
+  margin: 0;
+  margin-left: 0 !important;
+  padding: 5px 10px;
+  color: var(--txt);
+  font-weight: 600;
+}
+
+.md-form .form-control:focus {
+  border-bottom: none !important;
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1) !important;
+          box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1) !important;
+}
+
+.bootstrap-select {
+  width: unset !important;
+}
+
+.bootstrap-select .dropdown-toggle {
+  margin: 0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: var(--txt);
+  background-color: var(--bg1) !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select .dropdown-toggle:hover {
+  outline: none !important;
+  border-bottom: none !important;
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1) !important;
+          box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1) !important;
+}
+
+.bootstrap-select .dropdown-item.active, .bootstrap-select .dropdown-item:active {
+  background-color: #26A143;
+}
+
+.bootstrap-select .dropdown-item.active:hover, .bootstrap-select .dropdown-item:active:hover {
+  color: #fff;
+}
+
+.bootstrap-select.show > .btn-light.dropdown-toggle {
+  outline: none !important;
+  border-bottom: none !important;
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1) !important;
+          box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1) !important;
+}
+
+.product-list {
+  background-color: var(--bg1);
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1);
+          box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1);
+}
+
+.product-list .filter-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  background-color: var(--bg2);
+  margin-bottom: 20px;
+}
+
+.product-list .filter-bar .md-form .form-control {
+  background-color: var(--bg1) !important;
+  border-radius: 5px !important;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.product-list .filter-bar .md-form i {
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-list .filter-bar .filter-item .label {
+  font-size: 15px;
+  color: var(--txt);
+  margin-right: 10px;
+}
+
+.product-list .filter-bar .btn-group .btn, .product-list .filter-bar .btn-group .btn-grn, .product-list .filter-bar .btn-group .btn-org {
+  margin: 5px;
+  padding: 0;
+  border-radius: 5px !important;
+  background-color: var(--bg1);
+  width: 35px;
+  height: 35px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 35px;
+  text-align: center;
+  color: var(--txt);
+}
+
+.product-list .filter-bar .btn-group .btn input, .product-list .filter-bar .btn-group .btn-grn input, .product-list .filter-bar .btn-group .btn-org input {
+  opacity: 0;
+}
+
+.product-list .filter-bar .btn-group .btn span, .product-list .filter-bar .btn-group .btn-grn span, .product-list .filter-bar .btn-group .btn-org span {
+  margin-right: 0;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.product-list .filter-bar .btn-group .btn.active, .product-list .filter-bar .btn-group .active.btn-grn, .product-list .filter-bar .btn-group .active.btn-org {
+  background-color: #26A143;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
