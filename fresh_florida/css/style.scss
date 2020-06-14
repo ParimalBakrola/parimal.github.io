@@ -475,7 +475,7 @@ ul{
         .main{
             display: flex;
             align-items: flex-start;
-
+            flex-grow: 1;
             .img-wrap{
                 overflow: hidden;
                 border-radius: 5px;
@@ -514,16 +514,57 @@ ul{
         .actions{
             display: flex;
             align-items: center;
+            flex-grow: 1;
+            justify-content: space-between;
 
             .md-form{
                 margin: 0;
 
                 .label{
                     display: block;
-                    font-size: 12px;
+                    font-size: 14px;
                     font-weight: 600;
                     color: var(--txt);
                     letter-spacing: 1px;
+                    margin-bottom: 5px;
+                }
+                .control{
+                    display: flex;
+
+                    .btn{
+                        margin: 5px;
+                        padding: 0;
+                        border-radius: 5px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: var(--txt);
+                        color: var(--bg1);
+                        line-height: 30px;
+                        text-align: center;
+                        
+                        span{
+                            margin-right: 0;
+                        }
+                    }
+                    .form-control{
+                        max-width: 50px;
+                        border-radius: 5px !important;
+                        text-align: center;
+                        padding: 0;
+                        height: 32px;
+                        margin: 5px 0;
+                        color: rgba(28, 22, 39, .8);
+                    }
+                }                
+                .bootstrap-select .dropdown-toggle{
+                    background-color: var(--bg2) !important;
+                }
+            }
+
+            .btn-org{
+                padding: 8px 25px;
+                i{
+                    font-size: 20px;
                 }
             }
         }
