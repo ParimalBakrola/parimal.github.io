@@ -384,9 +384,8 @@ ul {
   background-color: #eee !important;
   margin: 0;
   margin-left: 0 !important;
-  padding: 5px 10px;
+  padding: 5px 15px;
   color: var(--txt);
-  font-weight: 600;
 }
 
 .md-form .form-control:focus {
@@ -592,6 +591,7 @@ ul {
   font-size: 16px;
   font-weight: 600;
   color: var(--txt);
+  margin-bottom: 0;
 }
 
 .products-list .item .actions {
@@ -637,8 +637,9 @@ ul {
   height: 30px;
   background-color: var(--txt);
   color: var(--bg1);
-  line-height: 30px;
+  line-height: 32px;
   text-align: center;
+  opacity: .6;
 }
 
 .products-list .item .actions .md-form .control .btn span, .products-list .item .actions .md-form .control .btn-grn span, .products-list .item .actions .md-form .control .btn-org span {
@@ -660,7 +661,7 @@ ul {
 }
 
 .products-list .item .actions .btn-org {
-  padding: 8px 25px;
+  padding: 6px 22px;
 }
 
 .products-list .item .actions .btn-org i {
@@ -690,6 +691,7 @@ ul {
 
 .cart-wrap .sub-title {
   position: relative;
+  margin-bottom: 25px;
 }
 
 .cart-wrap .sub-title:after {
@@ -703,5 +705,362 @@ ul {
           transform: translateY(-50%);
   margin-left: 25px;
   border-radius: 10px;
+}
+
+.cart-wrap .bg {
+  font-size: 140px;
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  right: 0;
+  opacity: .09;
+  background: -webkit-linear-gradient(45deg, #079544, #86C341);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cart-wrap .empty {
+  text-align: center;
+}
+
+.cart-wrap .empty i {
+  font-size: 110px;
+  background: -webkit-linear-gradient(45deg, #079544, #86C341);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cart-wrap .empty p {
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: var(--txt-colorg);
+}
+
+.cart-wrap .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px;
+  position: relative;
+}
+
+.cart-wrap .list .item .img-wrap {
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 70px;
+  border: 1px solid rgba(28, 22, 39, 0.1);
+  margin-right: 10px;
+}
+
+.cart-wrap .list .item .details {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 10px;
+}
+
+.cart-wrap .list .item .details .name {
+  margin-bottom: 5px;
+  color: var(--txt-colorg);
+  font-size: 15px;
+  letter-spacing: .5px;
+  margin-right: 10px;
+  line-height: 1.2;
+}
+
+.cart-wrap .list .item .details .price {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 0;
+}
+
+.cart-wrap .list .item .details .price span {
+  color: var(--txt-colorg);
+}
+
+.cart-wrap .list .item .price {
+  font-size: 16px;
+  color: var(--txt);
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 15px;
+  margin-right: 10px;
+}
+
+.cart-wrap .list .item .remove {
+  display: inline-block;
+  color: #F35252;
+  padding: 5px;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+}
+
+.cart-wrap .list .item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+}
+
+.cart-wrap .total {
+  margin-top: 10px;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 16px;
+  color: var(--txt);
+}
+
+.cart-wrap .total span {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.cart-wrap .date {
+  display: inline-block;
+  width: unset;
+}
+
+.cart-wrap .date .btn-org {
+  margin: 5px 0;
+}
+
+.cart-wrap .date .btn-org i {
+  margin-right: 5px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cart-wrap .condition {
+  color: #F35252;
+  font-size: 14px;
+  letter-spacing: .3px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.datepicker table td {
+  font-weight: 600;
+}
+
+.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active,
+.datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover.active,
+.datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover:active {
+  color: #fff;
+  background-color: #F88334;
+  border-color: #F88334;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+footer {
+  padding: 40px 0 0;
+  background-color: #0E122B;
+}
+
+footer p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer .contact {
+  margin-bottom: 30px;
+}
+
+footer .contact a {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  letter-spacing: .4px;
+  display: inline-block;
+}
+
+footer .contact a i {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+footer .logo {
+  max-width: 150px;
+}
+
+footer .md-form {
+  margin-top: 0;
+}
+
+footer .md-form .form-control {
+  padding-right: 120px !important;
+  font-size: 14px;
+  height: 36px;
+  padding-left: 15px !important;
+}
+
+footer .md-form .btn, footer .md-form .btn-grn, footer .md-form .btn-org {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  padding: 4.5px 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+  margin-right: 5px;
+}
+
+footer .md-form .btn:hover, footer .md-form .btn-grn:hover, footer .md-form .btn-org:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+footer .social a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  margin: 0;
+  margin-right: 15px;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  font-size: 14px;
+}
+
+footer .cpy {
+  border-top: 1px solid #464A63;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 15px 0;
+  font-size: 14px;
+  opacity: .7;
+}
+
+/*--- Common Modals ---*/
+.modal-dialog .modal-content {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: var(--bg1);
+}
+
+.modal-dialog .modal-content .modal-header {
+  border-bottom: 0;
+  position: relative;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.modal-dialog .modal-content .modal-header .close {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  right: -4px;
+  top: 15px;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.modal-dialog .modal-content .modal-header .close span {
+  font-weight: 600;
+  color: var(--txt);
+}
+
+.login-modal .title {
+  color: var(--txt-colorg);
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-modal .md-form {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.login-modal .md-form .form-control {
+  padding: 6px 20px;
+}
+
+.login-modal .t-link {
+  text-align: right;
+  font-size: 13px;
+  color: var(--txt-colorg);
+}
+
+.login-modal .btn, .login-modal .btn-grn, .login-modal .btn-org {
+  display: block;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.login-modal .social-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-modal .social-login .fb {
+  color: #fff;
+  background-color: #4267B2;
+  text-transform: none;
+  letter-spacing: .4px;
+  -webkit-box-shadow: 0 8px 16px rgba(66, 103, 178, 0.1);
+          box-shadow: 0 8px 16px rgba(66, 103, 178, 0.1);
+}
+
+.login-modal .social-login .fb i {
+  float: left;
+  line-height: 22px;
+  font-size: 17px;
+  width: 24px;
+  text-align: center;
+}
+
+.login-modal .social-login .google {
+  text-transform: none;
+  letter-spacing: .4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 16px rgba(75, 75, 77, 0.1);
+          box-shadow: 0 8px 16px rgba(75, 75, 77, 0.1);
+}
+
+.login-modal .social-login .google img {
+  float: left;
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */
