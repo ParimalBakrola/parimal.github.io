@@ -168,7 +168,7 @@ ul{
     .toggle-btn{
         box-shadow: none;
         padding: 10px;
-        font-size: 18px;
+        font-size: 16px;
 
         span{
             margin-right: 0;                        
@@ -272,7 +272,7 @@ ul{
             display: flex;
         }
 
-        .list-h li{
+        .list-h li:not(:last-child){
             margin-right: 30px;
         }
 
@@ -317,6 +317,8 @@ ul{
 
     .count{
         font-size: 12px;
+        margin-right: 0;
+        margin-left: 15px;
     }
 
     input{
@@ -815,7 +817,7 @@ footer{
             margin: 0;
             margin-right: 5px;
             &:hover{
-                transform: none;
+                transform: translateY(-50%);
             }
         }
     }
@@ -872,26 +874,31 @@ footer{
         }
     }
 }
-
-.login-modal{
+.modal-body{
     .title{
         color: var(--txt-colorg);
         font-size: 30px;
         font-weight: 600;
         text-transform: uppercase;
-        text-align: center;       
+        text-align: center;
         margin-bottom: 30px; 
     }
+}
+
+.login-modal{
     .md-form{
         margin-top: 0;
         margin-bottom: 20px;
         .form-control{
             padding: 6px 20px;
         }
+        textarea.form-control{
+            border-radius: 5px !important;
+        }
     }
     .t-link{
         text-align: right;
-        font-size: 13px;
+        font-size: 14px;
         color: var(--txt-colorg);
     }
     .btn{
@@ -910,7 +917,7 @@ footer{
             background-color: #4267B2;
             text-transform: none;
             letter-spacing: .4px;
-            box-shadow: 0 8px 16px rgba(66, 103, 178, .1);
+            box-shadow: 0 8px 16px rgba(66, 103, 178, .2);
             i{
                 float: left;
                 line-height: 22px;
@@ -923,10 +930,252 @@ footer{
             text-transform: none;
             letter-spacing: .4px;
             background-color: #fff;
+            color: #4B4B4D;
             box-shadow: 0 8px 16px rgba(75, 75, 77, 0.1);
             img{
                 float: left;
                 width: 20px;
+            }
+        }
+    }
+    p{
+        font-size: 15px;
+        color: var(--txt);
+        margin-bottom: 0;
+        margin-top: 15px;
+        text-align: center;
+        a{
+            color: var(--txt-colorg);
+            font-weight: 600;
+        }
+    }
+    .back{
+        position: absolute;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: var(--txt-colorg);
+        font-weight: 600;
+        transform: rotateZ(90deg);
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+    }
+}
+
+// .navbar-toggler{
+//     background-color: transparent;
+//     .icon{
+//         width: 16px;
+//         height: 1px;
+//         background-color: var(--txt);
+//     }
+// }
+
+.navbar-toggler{
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon{
+    background-color: var(--txt);
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    background-image: unset !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background-color: transparent;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--txt);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .3s;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon:before{
+    transform: translateY(-6px) rotate(0deg);
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon:after{
+    transform: translateY(6px) rotate(0deg);
+}
+
+.navbar-toggler .navbar-toggler-icon:before{
+    transform: translateY(0) rotate(45deg);
+}
+
+.navbar-toggler .navbar-toggler-icon:after{
+    transform: translateY(0) rotate(-45deg);
+}
+
+/*------------- Responsive -------------*/
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 1200px) {
+    .hero .hero-inner{
+        width: 70%;
+    }
+    .categories .sub-title{
+        display: none;
+    }
+    .categories .btn-cb{
+        min-width: unset;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+    .navbar .container{
+        max-width: unset;
+    }
+    .navbar .btn, .navbar .btn-grn, .navbar .btn-org,.cart-icon{
+        margin: 10px 0;
+    }
+    .hero .hero-inner .title{
+        font-size: 40px;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media screen and (max-width: 768px) {
+    .navbar .logo{
+        height: 50px;
+    }
+
+    .hero .hero-inner{
+        width: 90%;
+    }
+
+    .section{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .shop-zone .categories{
+        margin-bottom: 20px;
+        .list-h li{
+            margin-right: 15px !important;
+            .btn-cb .count{
+                display: none;
+            }
+        }
+    }
+
+    .filter-bar{
+        padding: 10px;
+        background-color: var(--bg1);
+        .md-form .form-control,
+        .bootstrap-select .dropdown-toggle{
+            background-color: var(--bg3) !important;
+        }        
+    }
+
+    .filter-bar .view,
+    .filter-bar .label{
+        display: none !important;
+    }
+
+    .products-wrap{
+        background-color: transparent;
+        padding: 0;
+        box-shadow: unset;
+        overflow: visible;
+
+        .req-section{
+            background-color: var(--bg1);
+            flex-direction: column;
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            p{
+                margin-right: 0;
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    .products-list .item{
+        position: relative;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .08);
+        border-radius: 5px;
+        padding-right: 35px;
+        margin-right: 25px;
+        background-color: var(--bg1);
+        flex-direction: column;
+
+        .main{
+            width: 100%;
+            .name,.review{
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .actions{
+            .btn-org{
+                padding: 0;
+                margin: 0;
+                font-size: 16px;
+                display: block;
+                width: 40px;
+                position: absolute;
+                right: -20px;
+                height: 40px;
+                text-align: center;
+                line-height: 42px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .md-form .label{
+                display: none;
+            }
+            &:after{
+                content: unset !important;
+            }
+        }
+    }
+    footer{
+        padding: 30px 10px 0;
+        .logo{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media screen and (max-width: 544px) {
+    .shop-zone .categories{
+        padding: 10px;
+        .btn-cb{
+            min-width: unset;
+            padding: 5px 12px;
+            .cb{
+                display: none;
             }
         }
     }

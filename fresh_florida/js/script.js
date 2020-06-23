@@ -92,4 +92,15 @@ $(document).ready(function(){
     // Datepicker
     $('.datepicker').datepicker();
 
+    //Sign up
+    $("#toggleSignup").on('click', function(){
+        $("#login").addClass('hidden');
+        $("#signup").removeClass('hidden');
+    });
+
+    //Login
+    $("#togglelogin").on('click', function(){
+        $("#login").removeClass('hidden');
+        $("#signup").addClass('hidden');
+    });
 });
