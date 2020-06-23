@@ -368,6 +368,23 @@ ul{
     }
 }
 
+.input-group-custom{
+    position: relative;
+    input{
+        padding-left: 20px !important;
+        padding-right: 110px !important;
+        width: 100%;
+    }
+    .btn{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+}
+
 // Bootstrap select customisation
 
 .bootstrap-select{
@@ -964,15 +981,6 @@ footer{
     }
 }
 
-// .navbar-toggler{
-//     background-color: transparent;
-//     .icon{
-//         width: 16px;
-//         height: 1px;
-//         background-color: var(--txt);
-//     }
-// }
-
 .navbar-toggler{
     position: relative;
     width: 30px;
@@ -1164,6 +1172,98 @@ footer{
         .logo{
             margin-bottom: 30px;
         }
+    }
+
+    .modal-dialog .modal-content{
+        padding:10px 20px;
+        .modal-body{
+            padding: 10px 0;
+        }
+    }
+}
+
+/*--- Profile Page ---*/
+.page-header{
+    min-height: 250px;
+    background:linear-gradient(0deg, rgba(38, 161, 67, .8), rgba(38, 161, 67, .8)), url(../img/bg.png);
+    background-size:cover;
+    display: flex;
+    align-items: center;
+
+    .user{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .img-wrap{
+            border-radius: 100px;
+            border: 2px solid #fff;
+            margin-right: 20px;
+            img{
+                width: 85px;
+            }
+        }
+        p{
+            color: #fff;
+            margin-bottom: 0;
+            letter-spacing: .4px;
+        }
+        .name{
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .mail{
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}
+
+.profile-page{
+    position: relative;
+    .profile-nav{
+        background-color: var(--bg1);
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        min-width: 85%;
+        display: flex;
+        top: -30px;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%);
+        justify-content: space-around;
+        box-shadow: 0 10px 30px rgba(28, 22, 39, .2);
+
+        li{
+            flex-grow: 1;
+            margin: 0 5px;
+            a{
+                text-align: center;
+                font-size: 15px;
+                color: var(--txt);
+                font-weight: 600;
+                background-color: var(--bg3);
+
+                i{
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-right: 5px;
+                }
+
+                &.active{
+                    background-color: var(--txt-colorg);
+                }
+            }
+        }
+    }
+
+    .profile-tabs{
+        padding: 30px;
+        padding-top: 50px;
+        background-color: var(--bg1);
+        margin-bottom: 50px;
+        border-radius: 0px 0px 5px 5px;
     }
 }
 
