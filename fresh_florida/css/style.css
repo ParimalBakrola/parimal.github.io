@@ -216,20 +216,56 @@ ul {
   color: var(--txt-colorg);
 }
 
-.navbar .nav-item .nav-link:after {
+.navbar .nav-item .nav-link:before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
   height: 2px;
   width: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: var(--txt-colorg);
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
 }
 
-.navbar .nav-item .nav-link:hover:after {
+.navbar .nav-item .nav-link:hover:before {
   width: 100%;
+}
+
+.navbar .user .nav-link {
+  padding: 8px 12px;
+  border-radius: 30px;
+  background-color: var(--bg3);
+}
+
+.navbar .user .nav-link img {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.navbar .user .nav-link:before {
+  content: none;
+}
+
+.navbar .user .nav-link:after {
+  vertical-align: initial;
+}
+
+.navbar .user .nav-link:hover {
+  color: #fff;
+  background-color: var(--txt-colorg);
+}
+
+.navbar .dropdown-menu {
+  padding: 0;
+  border: 0;
+  -webkit-box-shadow: 0 10px 30px rgba(38, 161, 67, 0.3);
+          box-shadow: 0 10px 30px rgba(38, 161, 67, 0.3);
 }
 
 .navbar .toggle-btn {
@@ -1283,7 +1319,8 @@ footer .cpy {
 
 .profile-page .address-card .header {
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
+  letter-spacing: .4px;
   font-weight: 600;
   padding: 6px 15px;
   background-color: var(--bg4);
@@ -1848,6 +1885,8 @@ footer .cpy {
     padding: 10px 0;
   }
   .profile-page .profile-nav {
+    width: 80%;
+    min-width: unset;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }

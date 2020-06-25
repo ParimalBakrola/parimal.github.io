@@ -46,11 +46,15 @@
                 <span class="icon-moon"></span>
               </button>
             </li>
-            <li>
-              <a href="#" class="btn btn-grn" data-toggle="modal" data-target="#login_modal">
-                <span class="icon-person"></span>  Log in/Sign up
-              </a>
-            </li>
+			<li class="nav-item dropdown user">
+				<a class="nav-link dropdown-toggle" id="usermenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="img/user.png" alt="profile"> Users name
+				</a>
+				<div class="dropdown-menu dropdown-primary" aria-labelledby="usermenu">
+					<a class="dropdown-item" href="account.html">My Account</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</li>
             <li>
               <a href="#" class="cart-icon">
                 <span class="count">3</span>
