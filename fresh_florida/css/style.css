@@ -633,7 +633,6 @@ ul {
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1);
           box-shadow: 0 3px 6px rgba(101, 109, 116, 0.1);
-  overflow: hidden;
 }
 
 .products-wrap .req-section {
@@ -816,6 +815,7 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
+  overflow: hidden;
 }
 
 .cart-wrap .sub-title {
